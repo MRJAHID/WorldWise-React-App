@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './Sidebar.module.css'
 import Logo from "./Logo.jsx";
 import AppNav from "./AppNav.jsx";
-import City from "./City.jsx";
 import {Outlet} from "react-router-dom";
+
 
 const Sidebar = () => {
     return (
