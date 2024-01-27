@@ -9,7 +9,8 @@ import CityList from "./components/CityList.jsx";
 import CountryList from "./components/CountryList.jsx";
 import City from "./components/City.jsx";
 import Form from "./components/Form.jsx";
-import {CitiesProvider} from "./context/CitiesContext.js";
+import {CitiesProvider} from "./context/CitiesContext.jsx";
+import {useContext} from "react";
 
 
 function App() {
@@ -34,5 +35,7 @@ function App() {
         </CitiesProvider>
     )
 }
+
+
 
 export default App
