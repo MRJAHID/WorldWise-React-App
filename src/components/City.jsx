@@ -3,7 +3,6 @@ import {useParams} from "react-router-dom";
 import {useCities} from "../context/CitiesContext.jsx";
 import {useEffect} from "react";
 import Spinner from "./Spinner.jsx";
-import Button from "./Button.jsx";
 import ButtonBack from "./ButtonBack.jsx";
 
 const formatDate = (date) =>
