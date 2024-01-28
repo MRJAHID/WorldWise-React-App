@@ -26,6 +26,7 @@ const CitiesProvider = ({children}) => {
         fetchCities();
     }, []);
 
+    // Creating City
     async function createCity(newCity) {
         try {
             setIsLoading(true);
@@ -45,6 +46,23 @@ const CitiesProvider = ({children}) => {
         }
     }
 
+    // Deleting City
+    async function deleteCity(id) {
+        try {
+            setIsLoading(true);
+            await fetch(`${BASE_URL}/cities`, {
+                method: 'DELETE',
+            });
+            setCities(cities => cities.filter(city => city.id !== id));
+        } catch (e) {
+            console.log(e.message);
+        } finally {
+            setIsLoading(false);
+        }
+    }
+
+
+    // Getting City
     async function getCity(id) {
         try {
             setIsLoading(true);
@@ -64,7 +82,8 @@ const CitiesProvider = ({children}) => {
             isLoading,
             getCity,
             currentCity,
-            createCity
+            createCity,
+            deleteCity
         }}>
             {children}
         </CitiesContext.Provider>
